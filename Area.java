@@ -26,7 +26,7 @@ class NorthWing extends Area {
 	String description = "";
 	
 	public NorthWing() {
-		connectedLocations.add(BurlingtonMall.getLocation("Entrance"));
+		connectedLocations.add(ShoppingTrip.getMall().getLocation("Entrance"));
 	}
 	
 	public String getName() {

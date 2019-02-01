@@ -1,13 +1,17 @@
 import java.util.ArrayList;
 
 public class ShoppingTrip {
-	Mall mall;
+	static Mall mall;
 	
 	public static void main(String[] args) {
-		Mall mall =  new BurlingtonMall();
 		Shopper player = new Shopper("Lucas", 1000);
-
 	}
-
 	
+	public ShoppingTrip() {
+		mall = new BurlingtonMall();
+	}
+	
+	public static Mall getMall() {
+		return mall;
+	}
 }

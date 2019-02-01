@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public abstract class Mall {
-
+	public abstract Location getLocation(String s);
+	
 }
 
 class BurlingtonMall extends Mall {
