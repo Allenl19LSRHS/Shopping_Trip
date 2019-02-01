@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public abstract class Area extends Location {
-
 }
 
 class Entrance extends Area {
@@ -10,9 +9,10 @@ class Entrance extends Area {
 	String description = "";
 	
 	
-	public Entrance() {
+	public void doConnections() {
 		//Add all the connected locations to the list in the constructor
-		connectedLocations.add(new LegalSeaFoods());
+		connectedLocations.add(ShoppingTrip.getMall().getLocation("Legal Sea Foods"));
+		connectedLocations.add(ShoppingTrip.getMall().getLocation("North Wing (Lower Level)"));
 	}
 	
 	public String getName() {
@@ -25,8 +25,9 @@ class NorthWing extends Area {
 	String name = "North Wing (Lower Level)";
 	String description = "";
 	
-	public NorthWing() {
+	public void doConnections() {
 		connectedLocations.add(ShoppingTrip.getMall().getLocation("Entrance"));
+
 	}
 	
 	public String getName() {

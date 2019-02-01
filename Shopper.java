@@ -10,5 +10,6 @@ public class Shopper {
 	public Shopper(String n, double b) {
 		name = n;
 		balance = b;
+		currentLocation = ShoppingTrip.getMall().getLocation("Entrance");
 	}
 }
