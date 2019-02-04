@@ -7,7 +7,7 @@ public abstract class Mall {
 }
 
 class BurlingtonMall extends Mall {
-	ArrayList<Location> locations = new ArrayList<Location>();
+	static ArrayList<Location> locations = new ArrayList<Location>();
 	
 	public BurlingtonMall() {
 		// Add all the areas to the list here
