@@ -1,15 +1,13 @@
-import java.util.ArrayList;
-
 public abstract class Area extends Location {
 
 }
 
 class Entrance extends Area {
-	ArrayList<Location> connectedLocations = new ArrayList<Location>();
 	String description = "";
 	
 	public Entrance() {
 		setName("Entrance");
+		createConnectedLocations();
 	}
 	
 	public void doConnections() {
@@ -20,9 +18,9 @@ class Entrance extends Area {
 }
 
 class NorthWing extends Area {
-	ArrayList<Location> connectedLocations = new ArrayList<Location>();
 	public NorthWing() {
 		setName("North Wing (Lower Level)");
+		createConnectedLocations();
 	}
 	String description = "";
 	

@@ -12,6 +12,10 @@ public abstract class Location {
 		name = s;
 	}
 	
+	public void createConnectedLocations() {
+		connectedLocations = new ArrayList<Location>();
+	}
+	
 	public ArrayList<Location> getConnected() {
 		return connectedLocations;
 	}

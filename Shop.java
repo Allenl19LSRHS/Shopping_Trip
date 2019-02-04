@@ -7,10 +7,10 @@ public abstract class Shop extends Location {
 class LegalSeaFoods extends Shop {
 	String description = "";
 	ArrayList<Purchasable> products = new ArrayList<Purchasable>();
-	ArrayList<Location> connectedLocations = new ArrayList<Location>();
 	
 	public LegalSeaFoods() {
 		setName("Legal Sea Foods");
+		createConnectedLocations();
 		// Add products to list
 		products.add(new FishPlate());
 	}
