@@ -14,3 +14,11 @@ class FishPlate extends Purchasable {
 		
 	}
 }
+
+class LobsterPlate extends Purchasable {
+	String name = "Lobster Plate";
+	double price = 15d;
+	boolean consumable = true;
+	boolean refundable = false;
+	String description = "";
+}

@@ -4,10 +4,10 @@ public abstract class Mall {
 	public abstract Location getLocation(String s);
 }
 
-class BurlingtonMall extends Mall {
+class FancyMall extends Mall {
 	static ArrayList<Location> locations = new ArrayList<Location>();
 	
-	public BurlingtonMall() {
+	public FancyMall() {
 		// Add all the areas to the list here
 		Location entrance = new Entrance();
 		Location northWing = new NorthWing();
