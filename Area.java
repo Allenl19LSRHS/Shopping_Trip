@@ -1,30 +1,45 @@
+import menu.*;
+
+
 public abstract class Area extends Location {
 
 }
 
 class Entrance extends Area {
-	String description = "";
+	String description = "Placeholder Description";
 	
 	public Entrance() {
 		setName("Entrance");
 		createConnectedLocations();
 	}
 	
-	public void doConnections() {
-		//Add all the connected locations to the list in the constructor
-		connectedLocations.add(ShoppingTrip.getMall().getLocation("Legal Sea Foods"));
-		connectedLocations.add(ShoppingTrip.getMall().getLocation("North Wing (Lower Level)"));
+	public void printInfo() {
+		System.out.println(description);
+		LSMenu menu = new LSMenu("What do you want to do?");
+		menu.addItem("Go to another location");
+		menu.addItem("Leave the Mall");
+		int answer = menu.displayAndChoose();
+		
+		switch (answer) {
+			case 1:
+				//ShoppingTrip.exit();
+				break;
+			case 2:
+				menu = null;
+				return;
+		}
 	}
 }
 
 class NorthWing extends Area {
+	String description = "Placeholder Description";
+	
 	public NorthWing() {
 		setName("North Wing (Lower Level)");
 		createConnectedLocations();
 	}
-	String description = "";
 	
-	public void doConnections() {
-		connectedLocations.add(ShoppingTrip.getMall().getLocation("Entrance"));
+	public void printInfo() {
+		System.out.println(description);
 	}
 }

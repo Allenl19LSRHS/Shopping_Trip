@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public abstract class Location {
 	ArrayList<Location> connectedLocations;
@@ -20,5 +21,9 @@ public abstract class Location {
 		return connectedLocations;
 	}
 	
-	public abstract void doConnections();
+	public void doConnections(Location...locations) {
+		connectedLocations.addAll(Arrays.asList(locations));
+	}
+	
+	public abstract void printInfo();
 }

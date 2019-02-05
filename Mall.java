@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public abstract class Mall {
 	public abstract Location getLocation(String s);
-	
-	public abstract void setUpConnections();
 }
 
 class BurlingtonMall extends Mall {
@@ -11,17 +9,19 @@ class BurlingtonMall extends Mall {
 	
 	public BurlingtonMall() {
 		// Add all the areas to the list here
-		locations.add(new Entrance());
-		locations.add(new NorthWing());
-		locations.add(new LegalSeaFoods());
+		Location entrance = new Entrance();
+		Location northWing = new NorthWing();
+		Location legalSeaFoods = new LegalSeaFoods();
+		locations.add(entrance);
+		locations.add(northWing);
+		locations.add(legalSeaFoods);
+		
+		// Set up connections
+		entrance.doConnections(northWing, legalSeaFoods);
+		northWing.doConnections(entrance);
+		legalSeaFoods.doConnections(entrance);
 	}
-	
-	public void setUpConnections() {
-		for (Location i:locations) {
-			i.doConnections();
-		}
-	}
-	
+
 	public Location getLocation(String s) {
 		for (Location i : locations) {
 			if (i.getName().equals(s)) {
