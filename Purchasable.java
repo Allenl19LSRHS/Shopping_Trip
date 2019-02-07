@@ -1,20 +1,28 @@
 
 public abstract class Purchasable {
+	String name;
+	double price;
+	boolean consumable;
+	boolean refundable;
+	String description;
 	
+	public void setUp(String n, double p, boolean c, boolean r, String d) {
+		name = n;
+		price = p;
+		consumable = c;
+		refundable = r;
+		description = d;
+	}
 }
 
-class FishPlate extends Purchasable {
-	String name = "Fish Plate";
-	double price = 10d;
-	boolean consumable = true;
-	boolean refundable = false;
-	String description = "";
+class FishPlate extends Purchasable {	
+	public FishPlate() {
+		setUp("Fish Plate", 10d, true, false, "");
+	}
 }
 
 class LobsterPlate extends Purchasable {
-	String name = "Lobster Plate";
-	double price = 15d;
-	boolean consumable = true;
-	boolean refundable = false;
-	String description = "";
+	public LobsterPlate() {
+		setUp("Lobster Plate", 15d, true, false, "");
+	}
 }

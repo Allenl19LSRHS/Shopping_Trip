@@ -40,4 +40,18 @@ public class Shopper {
 	void moveTo(Location l) {
 		currentLocation = l;
 	}
+	
+	public void buy(Purchasable p) {
+		if (!p.consumable) {
+			cart.add(p);
+		}
+		balance -= p.price;
+		System.out.println(p.description);
+		String totalCart = "Your cart is now: ";
+		for (Purchasable i : cart) {
+			totalCart += i.name + ", ";
+		}
+		System.out.println(totalCart);
+		System.out.println("Your card balance is now " + balance);
+	}
 }

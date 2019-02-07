@@ -7,10 +7,12 @@ public abstract class Area extends Location {
 
 class Entrance extends Area {
 	String description = "Placeholder Description";
+	Shopper player;
 	
-	public Entrance() {
+	public Entrance(Shopper p) {
 		setName("Entrance");
 		createConnectedLocations();
+		player = p;
 	}
 	
 	public void printInfo() {
@@ -32,11 +34,13 @@ class Entrance extends Area {
 }
 
 class NorthWing extends Area {
-	String description = "Placeholder Description";
+	String description = "You are in the North Wing, with several retail stores arrayed along.";
+	Shopper player;
 	
-	public NorthWing() {
+	public NorthWing(Shopper p) {
 		setName("North Wing (Lower Level)");
 		createConnectedLocations();
+		player = p;
 	}
 	
 	public void printInfo() {

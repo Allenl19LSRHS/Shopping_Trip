@@ -5,13 +5,15 @@ public abstract class Mall {
 }
 
 class FancyMall extends Mall {
-	static ArrayList<Location> locations = new ArrayList<Location>();
+	ArrayList<Location> locations = new ArrayList<Location>();
+	Shopper player;
 	
-	public FancyMall() {
+	public FancyMall(Shopper p) {
 		// Add all the areas to the list here
-		Location entrance = new Entrance();
-		Location northWing = new NorthWing();
-		Location legalSeaFoods = new LegalSeaFoods();
+		player = p;
+		Location entrance = new Entrance(player);
+		Location northWing = new NorthWing(player);
+		Location legalSeaFoods = new LegalSeaFoods(player);
 		locations.add(entrance);
 		locations.add(northWing);
 		locations.add(legalSeaFoods);
