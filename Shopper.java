@@ -17,18 +17,17 @@ public class Shopper {
 	
 	public void visit(Location l) {
 		currentLocation.printInfo();
-		if (currentLocation == null) {
-			return;
+		if (!ShoppingTrip.isFinished) { 
+			// List all the connected locations, and if it's a store, give an option for purchase
+			ArrayList<Location> connectedLocations = l.getConnected();
+			for (Location i : connectedLocations) {
+				locationMenu.addItem(i.getName());
+			}
+			Location chosenLocation = connectedLocations.get(locationMenu.displayAndChoose() - 1);
+			locationMenu.resetMenu();
+			currentLocation = chosenLocation;
+			visit(chosenLocation);
 		}
-		// List all the connected locations, and if it's a store, give an option for purchase
-		ArrayList<Location> connectedLocations = l.getConnected();
-		for (Location i : connectedLocations) {
-			locationMenu.addItem(i.getName());
-		}
-		Location chosenLocation = connectedLocations.get(locationMenu.displayAndChoose() - 1);
-		locationMenu.resetMenu();
-		currentLocation = chosenLocation;
-		visit(chosenLocation);
 	}
 	
 	public void visit (Mall m) {

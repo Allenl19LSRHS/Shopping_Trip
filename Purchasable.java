@@ -9,10 +9,6 @@ class FishPlate extends Purchasable {
 	boolean consumable = true;
 	boolean refundable = false;
 	String description = "";
-	
-	public FishPlate() {
-		
-	}
 }
 
 class LobsterPlate extends Purchasable {

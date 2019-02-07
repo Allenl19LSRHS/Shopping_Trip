@@ -21,10 +21,10 @@ class Entrance extends Area {
 		int answer = menu.displayAndChoose();
 		
 		switch (answer) {
-			case 1:
-				//ShoppingTrip.exit();
-				break;
 			case 2:
+				ShoppingTrip.setDone();
+				break;
+			case 1:
 				menu = null;
 				return;
 		}
