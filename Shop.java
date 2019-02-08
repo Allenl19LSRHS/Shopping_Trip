@@ -49,6 +49,7 @@ class LegalSeaFoods extends Shop {
 		} else {
 			Purchasable selProduct = products.get(answer-1);
 			player.buy(selProduct);
+			printInfo();
 		}
 	}
 }
