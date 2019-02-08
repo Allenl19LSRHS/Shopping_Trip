@@ -12,6 +12,7 @@ class LegalSeaFoods extends Shop {
 	public LegalSeaFoods(Shopper p) {
 		setName("Legal Sea Foods");
 		createConnectedLocations();
+		setDescription("This is Legal Sea Foods, a popular and large sea fod restaurant");
 		player = p;
 		// Add products to list
 		products.add(new FishPlate());

@@ -7,7 +7,7 @@ class Entrance extends Area {
 	
 	public Entrance(Shopper p) {
 		setName("Entrance");
-		setDescription("Placeholder");
+		setDescription("You are in the main entrance area.");
 		createConnectedLocations();
 		player = p;
 	}
