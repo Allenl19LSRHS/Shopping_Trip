@@ -38,7 +38,7 @@ class NorthWing extends Area {
 	Shopper player;
 	
 	public NorthWing(Shopper p) {
-		setName("North Wing (Lower Level)");
+		setName("North Wing");
 		createConnectedLocations();
 		player = p;
 	}

@@ -46,6 +46,7 @@ public class Shopper {
 			cart.add(p);
 		}
 		balance -= p.price;
+		pocket.add(new Receipt(p, p.price, currentLocation));
 		System.out.println(p.description);
 		String totalCart = "Your cart is now: ";
 		for (Purchasable i : cart) {
