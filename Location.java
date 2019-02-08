@@ -4,6 +4,7 @@ import java.util.Arrays;
 public abstract class Location {
 	ArrayList<Location> connectedLocations;
 	String name = "";
+	String description;
 	
 	public String getName() {
 		return name;
@@ -25,5 +26,7 @@ public abstract class Location {
 		connectedLocations.addAll(Arrays.asList(locations));
 	}
 	
-	public abstract void printInfo();
+	public void setDescription(String s) {
+		description = s;
+	}
 }

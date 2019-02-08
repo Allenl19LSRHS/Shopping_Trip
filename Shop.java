@@ -2,11 +2,10 @@ import java.util.ArrayList;
 import menu.*;
 
 public abstract class Shop extends Location {
-
+	public abstract void purchaseMenu();
 }
 
 class LegalSeaFoods extends Shop {
-	String description = "Placeholder";
 	ArrayList<Purchasable> products = new ArrayList<Purchasable>();
 	Shopper player;
 	
@@ -19,25 +18,7 @@ class LegalSeaFoods extends Shop {
 		products.add(new LobsterPlate());
 	}
 	
-	public void printInfo() {
-		System.out.println(description);
-		
-		LSMenu menu = new LSMenu("What would you like to do?");
-		menu.addItem("Buy a product");
-		menu.addItem("Go to another area");
-		
-		switch (menu.displayAndChoose()) {
-			case 1:
-				menu = null;
-				purchaseMenu();
-				break;
-			case 2:
-				menu = null;
-				return;
-		}
-	}
-	
-	void purchaseMenu() {
+	public void purchaseMenu() {
 		LSMenu menu = new LSMenu("Welcome to Legal Sea Foods. What can I get for you today?");
 		for (Purchasable i : products) {
 			menu.addItem(i.name);
@@ -49,7 +30,6 @@ class LegalSeaFoods extends Shop {
 		} else {
 			Purchasable selProduct = products.get(answer-1);
 			player.buy(selProduct);
-			printInfo();
 		}
 	}
 }
