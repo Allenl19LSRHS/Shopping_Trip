@@ -15,14 +15,40 @@ public abstract class Purchasable {
 	}
 }
 
-class FishPlate extends Purchasable {	
-	public FishPlate() {
-		setUp("Fish Plate", 10d, true, false, "");
+// Legal Sea Foods
+class SalmonPlate extends Purchasable {	
+	public SalmonPlate() {
+		setUp("Salmon Plate", 30d, true, false, "");
 	}
 }
 
 class LobsterPlate extends Purchasable {
 	public LobsterPlate() {
-		setUp("Lobster Plate", 15d, true, false, "");
+		setUp("Lobster Plate", 68d, true, false, "");
+	}
+}
+
+class FishCakes extends Purchasable {
+	public FishCakes() {
+		setUp("Fish Cakes", 20d, true, false, "");
+	}
+}
+
+// Dunkin
+class smallCoffee extends Purchasable {
+	public smallCoffee() {
+		setUp("Small Coffee", 1.59d, true, false, "");
+	}
+}
+
+class mediumCoffee extends Purchasable {
+	public mediumCoffee() {
+		setUp("Medium Coffee", 1.89d, true, false, "");
+	}
+}
+
+class largeCoffee extends Purchasable {
+	public largeCoffee() {
+		setUp("Large Coffee", 2.09d, true, false, "");
 	}
 }

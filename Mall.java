@@ -14,14 +14,17 @@ class FancyMall extends Mall {
 		Location entrance = new Entrance(player);
 		Location northWing = new NorthWing(player);
 		Location legalSeaFoods = new LegalSeaFoods(player);
+		Location dunkin = new Dunkin(player);
 		locations.add(entrance);
 		locations.add(northWing);
 		locations.add(legalSeaFoods);
+		locations.add(dunkin);
 		
 		// Set up connections
-		entrance.doConnections(northWing, legalSeaFoods);
+		entrance.doConnections(northWing, legalSeaFoods, dunkin);
 		northWing.doConnections(entrance);
 		legalSeaFoods.doConnections(entrance);
+		dunkin.doConnections(entrance);
 	}
 
 	public Location getLocation(String s) {
