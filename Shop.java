@@ -22,7 +22,7 @@ class LegalSeaFoods extends Shop {
 	public void purchaseMenu() {
 		LSMenu menu = new LSMenu("Welcome to Legal Sea Foods. What can I get for you today?");
 		for (Purchasable i : products) {
-			menu.addItem(i.name);
+			menu.addItem(i.name + ", " + i.price);
 		}
 		menu.addItem("Never mind, thanks");
 		int answer = menu.displayAndChoose();
