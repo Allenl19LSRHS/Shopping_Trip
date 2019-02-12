@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import menu.*;
 
+// The base shop has more specialized functionality that Locations and Areas don't have
+// 	method to set products list
+// 	method that gets the player object (for purchasing things)
+// 	the actual purchaseMenu method that displays options for purchase
 public abstract class Shop extends Location {
 	ArrayList<Purchasable> products;
 	Shopper player;
