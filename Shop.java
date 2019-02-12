@@ -30,14 +30,26 @@ public abstract class Shop extends Location {
 	}
 }
 
+// Making a shop needs:
+// 	a setName
+//	createConnectedLocations
+//	a setDescription
+//	a getPlayer(p)
+//	a setProducts
+
 class LegalSeaFoods extends Shop {
 	
+	// Don't forget the Shopper p part!
 	public LegalSeaFoods(Shopper p) {
+		// sets the name of the location (Inherited class and variable from Location)
 		setName("Legal Sea Foods");
+		// inherited method from Location which sets up connections
 		createConnectedLocations();
+		// Inherited method from location which sets the description variable, also inherited
 		setDescription("This is Legal Sea Foods, a popular and large sea fod restaurant");
+		// inherited method from Shop that gives the store the player object
 		getPlayer(p);
-		// Add products to list
+		// Add products to list, inherited method from Shop
 		setProducts(new SalmonPlate(), new LobsterPlate(), new FishCakes());
 	}
 }

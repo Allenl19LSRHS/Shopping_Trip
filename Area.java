@@ -2,24 +2,24 @@ public abstract class Area extends Location {
 
 }
 
+
+// Areas are the places that aren't shops/stores but still have connections
+// As such, they don't need to know much of anything, they just exist
+// All methods are simply inherited from Location
 class Entrance extends Area {
-	Shopper player;
 	
-	public Entrance(Shopper p) {
+	public Entrance() {
 		setName("Entrance");
 		setDescription("You are in the main entrance area.");
 		createConnectedLocations();
-		player = p;
 	}
 }
 
 class NorthWing extends Area {
-	Shopper player;
 	
-	public NorthWing(Shopper p) {
+	public NorthWing() {
 		setName("North Wing");
 		setDescription("You are in the North Wing, with several retail stores.");
 		createConnectedLocations();
-		player = p;
 	}
 }

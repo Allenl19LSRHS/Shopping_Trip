@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// The base class for every place the player can go, including areas and shops
+// provides base functionality, including connected locations, name, description, and getters/setters for all
 public abstract class Location {
 	ArrayList<Location> connectedLocations;
 	String name = "";

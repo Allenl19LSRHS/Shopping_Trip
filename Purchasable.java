@@ -15,6 +15,9 @@ public abstract class Purchasable {
 	}
 }
 
+// Purchasables are anything you can buy from a store
+// They have several member variables, all common, and all set by a method inherited from the base class
+
 // Legal Sea Foods
 class SalmonPlate extends Purchasable {	
 	public SalmonPlate() {

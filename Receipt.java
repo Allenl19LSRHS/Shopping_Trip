@@ -1,4 +1,6 @@
 
+
+// Receipts are simple objects added to player's pockets after every purchase, serves as transaction history
 public class Receipt {
 	Purchasable product;
 	double price;
