@@ -52,3 +52,9 @@ class largeCoffee extends Purchasable {
 		setUp("Large Coffee", 2.09d, true, false, "");
 	}
 }
+
+class breakfastSandwich extends Purchasable {
+	public breakfastSandwich() {
+		setUp("Breakfast Sandwich", 3.59d, true, false, "");
+	}
+}
