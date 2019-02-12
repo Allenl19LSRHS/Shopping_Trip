@@ -35,26 +35,45 @@ class FishCakes extends Purchasable {
 }
 
 // Dunkin
-class smallCoffee extends Purchasable {
-	public smallCoffee() {
+class SmallCoffee extends Purchasable {
+	public SmallCoffee() {
 		setUp("Small Coffee", 1.59d, true, false, "");
 	}
 }
 
-class mediumCoffee extends Purchasable {
-	public mediumCoffee() {
+class MediumCoffee extends Purchasable {
+	public MediumCoffee() {
 		setUp("Medium Coffee", 1.89d, true, false, "");
 	}
 }
 
-class largeCoffee extends Purchasable {
-	public largeCoffee() {
+class LargeCoffee extends Purchasable {
+	public LargeCoffee() {
 		setUp("Large Coffee", 2.09d, true, false, "");
 	}
 }
 
-class breakfastSandwich extends Purchasable {
-	public breakfastSandwich() {
+class BreakfastSandwich extends Purchasable {
+	public BreakfastSandwich() {
 		setUp("Breakfast Sandwich", 3.59d, true, false, "");
+	}
+}
+
+// Best Buy
+class VRHeadset extends Purchasable {
+	public VRHeadset() {
+		setUp("Virtual Realist Headset", 399.99d, false, true, "");
+	}
+}
+
+class Printer extends Purchasable {
+	public Printer() {
+		setUp("Fancy Home Printer", 99.99d, false, true, "");
+	}
+}
+
+class CheapPrinter extends Purchasable {
+	public CheapPrinter() {
+		setUp("Cheap Home Printer", 49.99d, false, true, "");
 	}
 }

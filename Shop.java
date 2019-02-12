@@ -49,7 +49,7 @@ class Dunkin extends Shop {
 		createConnectedLocations();
 		setDescription("Dunkin Donuts, a huge coffee and donut chain");
 		getPlayer(p);
-		setProducts(new smallCoffee(), new mediumCoffee(), new largeCoffee(), new breakfastSandwich());
+		setProducts(new SmallCoffee(), new MediumCoffee(), new LargeCoffee(), new BreakfastSandwich());
 	}
 }
 
@@ -60,6 +60,6 @@ class BestBuy extends Shop {
 		createConnectedLocations();
 		setDescription("Best Buy, a large mostly technology superstore");
 		getPlayer(p);
-		setProducts();
+		setProducts(new VRHeadset(), new Printer(), new CheapPrinter());
 	}
 }
