@@ -80,3 +80,21 @@ class CheapPrinter extends Purchasable {
 		setUp("Cheap Home Printer", 49.99d, false, true, "");
 	}
 }
+
+class Laptop extends Purchasable {
+	public Laptop() {
+		setUp("Laptop Computer", 400d, false, true, "");
+	}
+}
+
+class TV extends Purchasable {
+	public TV() {
+		setUp("Standard 50in TV", 200d, false, true, "");
+	}
+}
+
+class SmartTV extends Purchasable {
+	public SmartTV() {
+		setUp("50 inch 4k Smart TV", 330d, false, true, "");
+	}
+}

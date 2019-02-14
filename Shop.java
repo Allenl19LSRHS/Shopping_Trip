@@ -7,14 +7,14 @@ import menu.*;
 // 	method that gets the player object (for purchasing things)
 // 	the actual purchaseMenu method that displays options for purchase
 public abstract class Shop extends Location {
-	ArrayList<Purchasable> products;
+	ArrayList<Purchasable> products = new ArrayList<Purchasable>();
 	Shopper player;
 	
 	void getPlayer(Shopper p) {
 		player = p;
 	}
 	
-	void setProducts(Purchasable...pros) {
+	public void setProducts(Purchasable...pros) {
 		products.addAll(Arrays.asList(pros));
 	}
 	
@@ -76,6 +76,6 @@ class BestBuy extends Shop {
 		createConnectedLocations();
 		setDescription("Best Buy, a large mostly technology superstore");
 		getPlayer(p);
-		setProducts(new VRHeadset(), new Printer(), new CheapPrinter());
+		setProducts(new VRHeadset(), new Printer(), new CheapPrinter(), new Laptop(), new TV(), new SmartTV());
 	}
 }

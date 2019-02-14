@@ -114,13 +114,17 @@ public class Shopper {
 	
 	// method to actually buy products, called by the shops in purchaseMenu()
 	public void buy(Purchasable p) {
-		if (!p.consumable) {
-			cart.add(p);
+		if (p.price > balance) {
+			System.out.println("Sorry, your purchase has been rejected due to insufficient balance");
+		} else {
+			if (!p.consumable) {
+				cart.add(p);
+			}
+			balance -= p.price;
+			pocket.add(new Receipt(p, p.price, currentLocation));
+			System.out.println(p.description);
+			printCart();
+			System.out.println("Your card balance is now " + balance);
 		}
-		balance -= p.price;
-		pocket.add(new Receipt(p, p.price, currentLocation));
-		System.out.println(p.description);
-		printCart();
-		System.out.println("Your card balance is now " + balance);
 	}
 }
