@@ -18,23 +18,29 @@ class FancyMall extends Mall {
 		// Create all the locations. Need to access each twice, so store it to a variable
 		Location entrance = new Entrance();
 		Location northWing = new NorthWing();
+		Location foodCourt = new FoodCourt();
 		Location legalSeaFoods = new LegalSeaFoods(player);
 		Location dunkin = new Dunkin(player);
 		Location bestBuy = new BestBuy(player);
+		Location tacoBell = new TacoBell(player);
 		
 		// add all the locations to the arraylist for easy access
 		locations.add(entrance);
 		locations.add(northWing);
+		locations.add(foodCourt);
 		locations.add(legalSeaFoods);
 		locations.add(dunkin);
 		locations.add(bestBuy);
+		locations.add(tacoBell);
 		
 		// Set up connections between them (telling each of them which locations are connected to it)
-		entrance.doConnections(northWing, legalSeaFoods, dunkin);
-		northWing.doConnections(entrance, bestBuy);
+		entrance.doConnections(northWing, foodCourt, legalSeaFoods, dunkin);
+		northWing.doConnections(entrance, foodCourt, bestBuy);
+		foodCourt.doConnections(entrance, northWing, tacoBell);
 		legalSeaFoods.doConnections(entrance);
 		dunkin.doConnections(entrance);
 		bestBuy.doConnections(northWing);
+		tacoBell.doConnections(foodCourt);
 	}
 
 	

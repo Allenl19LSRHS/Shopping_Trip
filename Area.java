@@ -23,3 +23,11 @@ class NorthWing extends Area {
 		createConnectedLocations();
 	}
 }
+
+class FoodCourt extends Area {
+	public FoodCourt() {
+		setName("Food Court");
+		setDescription("You are in the food court, with lots of places to eat");
+		createConnectedLocations();
+	}
+}

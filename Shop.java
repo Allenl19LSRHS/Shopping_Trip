@@ -79,3 +79,13 @@ class BestBuy extends Shop {
 		setProducts(new VRHeadset(), new Printer(), new CheapPrinter(), new Laptop(), new TV(), new SmartTV());
 	}
 }
+
+class TacoBell extends Shop {
+	public TacoBell(Shopper p) {
+		setName("Taco Bell");
+		createConnectedLocations();
+		setDescription("Taco Bell, a fast food mexican restaurant");
+		getPlayer(p);
+		setProducts(new Taco(), new TacoCombo(), new Burrito());
+	}
+}

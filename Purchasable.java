@@ -98,3 +98,22 @@ class SmartTV extends Purchasable {
 		setUp("50 inch 4k Smart TV", 330d, false, true, "");
 	}
 }
+
+// Taco Bell
+class Taco extends Purchasable {
+	public Taco() {
+		setUp("Single Hard-shell Taco", 1.19d, true, false, "");
+	}
+}
+
+class TacoCombo extends Purchasable {
+	public TacoCombo() {
+		setUp("Taco Combo: 3 Hard-shell Tacos and a Drink", 5.59d, true, false, "");
+	}
+}
+
+class Burrito extends Purchasable {
+	public Burrito() {
+		setUp("Burrito", 1.99d, true, false, "");
+	}
+}

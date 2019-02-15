@@ -121,10 +121,13 @@ public class Shopper {
 				cart.add(p);
 			}
 			balance -= p.price;
+			double newB = balance * 100;
+			newB = Math.round(newB);
+			balance = newB/100;
 			pocket.add(new Receipt(p, p.price, currentLocation));
 			System.out.println(p.description);
 			printCart();
-			System.out.println("Your card balance is now " + balance);
+			System.out.println("Your card balance is now $" + balance);
 		}
 	}
 }
