@@ -23,6 +23,7 @@ class FancyMall extends Mall {
 		Location dunkin = new Dunkin(player);
 		Location bestBuy = new BestBuy(player);
 		Location tacoBell = new TacoBell(player);
+		Location panera = new Panera(player);
 		
 		// add all the locations to the arraylist for easy access
 		locations.add(entrance);
@@ -32,15 +33,17 @@ class FancyMall extends Mall {
 		locations.add(dunkin);
 		locations.add(bestBuy);
 		locations.add(tacoBell);
+		locations.add(panera);
 		
 		// Set up connections between them (telling each of them which locations are connected to it)
 		entrance.doConnections(northWing, foodCourt, legalSeaFoods, dunkin);
 		northWing.doConnections(entrance, foodCourt, bestBuy);
-		foodCourt.doConnections(entrance, northWing, tacoBell);
+		foodCourt.doConnections(entrance, northWing, tacoBell, panera);
 		legalSeaFoods.doConnections(entrance);
 		dunkin.doConnections(entrance);
 		bestBuy.doConnections(northWing);
 		tacoBell.doConnections(foodCourt);
+		panera.doConnections(foodCourt);
 	}
 
 	

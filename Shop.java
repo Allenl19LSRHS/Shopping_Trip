@@ -89,3 +89,13 @@ class TacoBell extends Shop {
 		setProducts(new Taco(), new TacoCombo(), new Burrito());
 	}
 }
+
+class Panera extends Shop {
+	public Panera(Shopper p) {
+		setName("Panera Bread");
+		createConnectedLocations();
+		setDescription("Panera Bread, a soup and sandwich place");
+		getPlayer(p);
+		setProducts(new Salad(), new TurkeySandwich(), new GrilledCheese(), new MacnCheese());
+	}
+}

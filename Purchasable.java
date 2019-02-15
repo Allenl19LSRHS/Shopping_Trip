@@ -117,3 +117,28 @@ class Burrito extends Purchasable {
 		setUp("Burrito", 1.99d, true, false, "");
 	}
 }
+
+// Panera
+class Salad extends Purchasable {
+	public Salad() {
+		setUp("Salad", 5.79d, true, false, "");
+	}
+}
+
+class TurkeySandwich extends Purchasable {
+	public TurkeySandwich() {
+		setUp("Turkey Sandwich", 10.38d, true, false, "");
+	}
+}
+
+class GrilledCheese extends Purchasable {
+	public GrilledCheese() {
+		setUp("Grilled Cheese Sandwich", 8.61d, true, false, "");
+	}
+}
+
+class MacnCheese extends Purchasable {
+	public MacnCheese() {
+		setUp("Mac n' Cheese", 5.19d, true, false, "");
+	}
+}
